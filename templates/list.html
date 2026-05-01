@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Employee list</title>
+  </head>
+  <body>
+    <h2>Employee List</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th><th>Name</th><th>Age</th><th>Department</th>
+      </tr>
+      {% for row in tab1 %}
+      <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+      </tr>
+      {% endfor %}
+    </table><br><br>
+    <a href="/">Back to main page</a>
+  </body>
+</html>
