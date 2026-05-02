@@ -130,4 +130,4 @@ def list():
     return render_template("list.html",tab1 = rows)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()

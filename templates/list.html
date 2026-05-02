@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Employee list</title>
-  </head>
-  <body>
-    <div class="container mt-5">
-    <h2 class="text-center mb-4">Employee List</h2>
+{% extends "base.html" %}
 
-    <table class="table table-striped table-bordered shadow" border="1">
+{% block content %}
+<h2 class="mb-4">Employee List</h2>
+
+<table class="table table-bordered table-striped shadow-sm">
+    <thead class="table-dark">
         <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Age</th>
             <th>Department</th>
         </tr>
-
+    </thead>
+    <tbody>
         {% for row in tab1 %}
         <tr>
             <td>{{ row[0] }}</td>
@@ -24,8 +21,8 @@
             <td>{{ row[3] }}</td>
         </tr>
         {% endfor %}
-    </table>
-    </div>
-    <a href="/first">Back to main page</a>
-  </body>
-</html>
+    </tbody>
+</table>
+
+<a href="/first" class="btn btn-success">Add New Employee</a>
+{% endblock %}
